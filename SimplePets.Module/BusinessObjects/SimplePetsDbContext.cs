@@ -26,7 +26,7 @@ namespace SimplePets.Module.BusinessObjects {
     public class Kitten : BabyPet
     {
         
-        public virtual Cat Parent { get; set; }  // not sure if I should have new here
+       new public virtual Cat Parent { get; set; }  // not sure if I should have new here
     }
     [NavigationItem("Pets")]
     public class Dog : Pet
@@ -69,7 +69,7 @@ namespace SimplePets.Module.BusinessObjects {
     }
     public class Puppy : BabyPet
     {
-        public virtual Dog Parent { get; set; }
+        new public virtual Dog Parent { get; set; }
     }
 
     // This code allows our Model Editor to get relevant EF Core metadata at design time.
